@@ -51,6 +51,11 @@
     <origin xyz="${head_x} ${head_y} ${head_z}" rpy="${head_roll} ${head_pitch} ${head_yaw}" />
   </xacro:head>
   
+  <xacro:lookat name="lookat" parent="torso_upper_neck_tilt_link" lower="-5.0" upper="5.0">
+    <origin xyz="${head_x} ${head_y} ${head_z}" rpy="${head_roll} ${head_pitch} ${head_yaw}"/>
+    <axis xyz="-1 0 0"/>
+  </xacro:lookat>
+  
   <xacro:schunk_pg70 name="pg70" parent="arm_7_link">
     <origin xyz="${pg70_x} ${pg70_y} ${pg70_z}" rpy="${pg70_roll} ${pg70_pitch} ${pg70_yaw}" />
   </xacro:schunk_pg70>

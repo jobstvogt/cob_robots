@@ -80,6 +80,15 @@
 			<arg name="component_name" value="tray" />
 			<arg name="robot" value="$(arg robot)" />
 		</include>
+		<!--include file="$(find cob_bringup)/drivers/schunk_powercube_chain_driver.launch" >
+			<arg name="component_name" value="arm" />
+			<arg name="robot" value="$(arg robot)" />
+		</include>
+		<include file="$(find cob_bringup)/controllers/cob_trajectory_controller.launch" >
+			<arg name="component_name" value="arm" />
+			<arg name="robot" value="$(arg robot)" />
+		</include-->
+		
 		<include file="$(find cob_bringup)/drivers/canopen_driver.launch" >
 			<arg name="component_name" value="arm" />
 			<arg name="robot" value="$(arg robot)" />
@@ -88,6 +97,7 @@
 			<arg name="component_name" value="arm" />
 			<arg name="robot" value="$(arg robot)" />
 		</include>
+		
 		<include file="$(find cob_bringup)/drivers/head_cob3.launch" >
 			<arg name="robot" value="$(arg robot)" />
 		</include>
@@ -126,11 +136,14 @@
 			<arg name="robot" value="$(arg robot)" />
 		</include>
 		
+		<node name="right_finger_publisher" pkg="right_finger_jointstate_publisher" type="right_finger_publisher.py"/>
+				
 		<!-- start asus camera -->
-		<include file="$(find cob_bringup)/drivers/openni2.launch" >
+		<include file="$(find cob_bringup)/drivers/openni.launch" >
 			<arg name="robot" value="$(arg robot)"/>
-			<arg name="machine" value="pc2"/>
+			<!--arg name="machine" value="pc2"/-->
 		</include>
+		
 		<include file="$(find cob_cam3d_throttle)/launch/cam3d_throttle.launch" >
 			<arg name="namespace" value="/cam3d" />
 			<arg name="rate" value="1.0" />
