@@ -65,7 +65,7 @@
 	<!-- pg70 mount positions | relative to arm_7_link -->
 	<property name="def_pg70_x" value="0.0"/>
 	<property name="def_pg70_y" value="0.0"/>
-	<property name="def_pg70_z" value="0.075"/>
+	<property name="def_pg70_z" value="0.0925"/>
 	<property name="def_pg70_roll" value="0.0"/>
 	<property name="def_pg70_pitch" value="0.0"/>
 	<property name="def_pg70_yaw" value="0.0"/>
@@ -85,7 +85,7 @@
 	<property name="def_head_axis_ref" value="0.1"/>
 
 	<!-- arm reference positions | used as calibration_rising for arm chain-->
-	<property name="def_arm_1_ref" value="-0.29616492077091777" />
+	<property name="def_arm_1_ref" value="0" /> <!---0.29616492077091777  , -0.35-->
 	<property name="def_arm_2_ref" value="0" />
 	<property name="def_arm_3_ref" value="0" />
 	<property name="def_arm_4_ref" value="0" />
@@ -101,16 +101,16 @@
 	<!-- camera calibration properties -->
 	<!-- ***************************** -->
 	<!-- left | handeye calibration | relative to head_axis_link -->
-	<property name="def_cam_reference_x" value="-0.05"/>
+	<property name="def_cam_reference_x" value="0.0"/> <!-- -0.05-->
 	<property name="def_cam_reference_y" value="-0.02"/>
-	<property name="def_cam_reference_z" value="-0.07"/>
-	<property name="def_cam_reference_roll" value="0"/>
-	<property name="def_cam_reference_pitch" value="-1.5563904314"/>
+	<property name="def_cam_reference_z" value="0.0"/> <!-- -0.07-->
+	<property name="def_cam_reference_roll" value="0.0"/>
+	<property name="def_cam_reference_pitch" value="-1.571"/>
 	<property name="def_cam_reference_yaw" value="0.0"/>
 
 	<!-- cam3d | handeye calibration | relative to cam_reference_link -->
-	<property name="def_cam3d_x" value="0.06"/>
-	<property name="def_cam3d_y" value="-0.03"/>
+	<property name="def_cam3d_x" value="0.0"/> <!-- 0.06-->
+	<property name="def_cam3d_y" value="0.0"/>
 	<property name="def_cam3d_z" value="0.0"/>
 	<property name="def_cam3d_roll" value="0.0"/>
 	<property name="def_cam3d_pitch" value="0.0"/>
