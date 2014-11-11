@@ -8,6 +8,7 @@
 
 	<param name="/$(arg name)/driver/data_skip" type="int" value="0"/>
 	<param name="/$(arg name)/driver/image_mode" type="int" value="5"/>
+	<param name="/$(arg name)/driver/ir_mode" type="int" value="5"/>
 	<param name="/$(arg name)/driver/depth_mode" type="int" value="5"/>
 	<param name="/$(arg name)/driver/z_offset_mm" type="int" value="0"/>
 

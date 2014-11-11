@@ -145,13 +145,13 @@
 			<arg name="name" value="cam3d"/>
 		</include>
 
-		<include file="$(find cob_bringup)/drivers/image_flip_nodelet.launch">
+		<!--include file="$(find cob_bringup)/drivers/image_flip_nodelet.launch">
 			<arg name="robot" value="$(arg robot)" />
 			<arg name="name" value="cam3d"/>
 			<arg name="nodelet_manager" value="cam3d_nodelet_manager"/>
-		</include>
+		</include-->
 
-		<node name="camera_info_relay" pkg="topic_tools" type="relay" args="cam3d/rgb/camera_info cam3d/flip/rgb/camera_info" respawn="true" />
+		<!--node name="camera_info_relay" pkg="topic_tools" type="relay" args="cam3d/rgb/camera_info cam3d/flip/rgb/camera_info" respawn="true" /-->
 		
 		<!--include file="$(find cob_cam3d_throttle)/launch/cam3d_throttle.launch" >
 			<arg name="namespace" value="/cam3d" />
