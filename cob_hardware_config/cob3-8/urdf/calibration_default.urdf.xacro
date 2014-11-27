@@ -33,23 +33,23 @@
 	<!-- tray mount positions | relative to base_link -->
 	<property name="def_tray_x" value="0.2406"/>
 	<property name="def_tray_y" value="0.1900"/>
-	<property name="def_tray_z" value="0.7320"/>
+	<property name="def_tray_z" value="0.8320"/>
 	<property name="def_tray_roll" value="2.3561"/>
 	<property name="def_tray_pitch" value="0.0"/>
 	<property name="def_tray_yaw" value="0.0"/>
 
 	<!-- torso mount positions | relative to base_link 
-	<property name="def_torso_x" value="0.1535525935"/>
+	<property name="def_torso_x" value="0.1605153138"/>
 	<property name="def_torso_y" value="0.0"/>
-	<property name="def_torso_z" value="0.8743916288"/>
-	<property name="def_torso_roll" value="1.5968312791"/>
-	<property name="def_torso_pitch" value="-0.0587251265"/>
-	<property name="def_torso_yaw" value="0.0660275925"/>-->
+	<property name="def_torso_z" value="0.8702400721"/>
+	<property name="def_torso_roll" value="1.563226442"/>
+	<property name="def_torso_pitch" value="0.0346163655"/>
+	<property name="def_torso_yaw" value="0.0107070343"/>-->
 
 	<!-- torso mount positions | relative to base_link -->
 	<property name="def_torso_x" value="0.1505153138"/>
 	<property name="def_torso_y" value="0.0"/>
-	<property name="def_torso_z" value="0.8702400721"/>
+	<property name="def_torso_z" value="0.8602400721"/>
 	<property name="def_torso_roll" value="1.563226442"/>
 	<property name="def_torso_pitch" value="0.0346163655"/>
 	<property name="def_torso_yaw" value="0.0107070343"/>
@@ -62,13 +62,28 @@
 	<property name="def_head_pitch" value="0.0"/>
 	<property name="def_head_yaw" value="0.0"/>
 
-	<!-- arm mount positions | relative to base_link -->
-	<property name="def_arm_x" value="0.040"/>
+	<!-- arm mount positions | relative to base_link
+	<property name="def_arm_x" value="0.030"/>
 	<property name="def_arm_y" value="-0.005"/>
 	<property name="def_arm_z" value="0.83637"/>
 	<property name="def_arm_roll" value="-0.2"/>
 	<property name="def_arm_pitch" value="-0.7854"/>
+	<property name="def_arm_yaw" value="1.6"/> -->
+
+	<property name="def_arm_x" value="0.01"/>
+	<property name="def_arm_y" value="0.03"/>
+	<property name="def_arm_z" value="0.80"/>
+	<property name="def_arm_roll" value="-0.2"/>
+	<property name="def_arm_pitch" value="-0.8"/>
 	<property name="def_arm_yaw" value="1.6"/>
+
+	<!-- arm mount positions | relative to base_link 
+	<property name="def_arm_x" value="0.06"/>
+	<property name="def_arm_y" value="0.0"/>
+	<property name="def_arm_z" value="0.80"/>
+	<property name="def_arm_roll" value="3.1415926"/>
+	<property name="def_arm_pitch" value="0.7854"/>
+	<property name="def_arm_yaw" value="-1.8326"/>-->
 	
 	<!-- pg70 mount positions | relative to arm_7_link -->
 	<property name="def_pg70_x" value="0.0"/>
@@ -110,14 +125,14 @@
 	<!-- ***************************** -->
 	<!-- left | handeye calibration | relative to head_axis_link -->
 	<property name="def_cam_reference_x" value="0.0"/> <!-- -0.05-->
-	<property name="def_cam_reference_y" value="-0.02"/>
+	<property name="def_cam_reference_y" value="0.0"/>
 	<property name="def_cam_reference_z" value="0.0"/> <!-- -0.07-->
-	<property name="def_cam_reference_roll" value="0.0"/>
-	<property name="def_cam_reference_pitch" value="-1.571"/>
-	<property name="def_cam_reference_yaw" value="0.0"/>
+	<property name="def_cam_reference_roll" value="-1.5708"/>
+	<property name="def_cam_reference_pitch" value="0.0"/>
+	<property name="def_cam_reference_yaw" value="3.14159"/>
 
 	<!-- cam3d | handeye calibration | relative to cam_reference_link -->
-	<property name="def_cam3d_x" value="0.0"/> <!-- 0.06-->
+	<property name="def_cam3d_x" value="0.017"/> <!-- 0.06-->
 	<property name="def_cam3d_y" value="0.0"/>
 	<property name="def_cam3d_z" value="0.02"/>
 	<property name="def_cam3d_roll" value="0.0"/>

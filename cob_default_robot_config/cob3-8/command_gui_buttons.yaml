@@ -45,6 +45,7 @@ group5:
   buttons: [[stop,trigger,stop],
     [home,move,home],
     [folded,move,folded],
+    [new_folded,move,new_folded],
     [pregrasp,move,pregrasp]]
 group7:
   group_name: gripper
