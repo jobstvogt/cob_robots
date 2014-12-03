@@ -31,9 +31,9 @@
 	<!-- upper robot calibration -->
 	<!-- *********************** -->
 	<!-- tray mount positions | relative to base_link -->
-	<property name="def_tray_x" value="0.2406"/>
-	<property name="def_tray_y" value="0.1900"/>
-	<property name="def_tray_z" value="0.8320"/>
+	<property name="def_tray_x" value="0.21"/>
+	<property name="def_tray_y" value="0.18"/>
+	<property name="def_tray_z" value="0.77"/>
 	<property name="def_tray_roll" value="2.3561"/>
 	<property name="def_tray_pitch" value="0.0"/>
 	<property name="def_tray_yaw" value="0.0"/>
@@ -88,7 +88,7 @@
 	<!-- pg70 mount positions | relative to arm_7_link -->
 	<property name="def_pg70_x" value="0.0"/>
 	<property name="def_pg70_y" value="0.0"/>
-	<property name="def_pg70_z" value="0.0925"/>
+	<property name="def_pg70_z" value="0.0854"/>
 	<property name="def_pg70_roll" value="0.0"/>
 	<property name="def_pg70_pitch" value="0.0"/>
 	<property name="def_pg70_yaw" value="0.0"/>
