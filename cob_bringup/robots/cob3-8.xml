@@ -153,12 +153,12 @@
 
 		<!--node name="camera_info_relay" pkg="topic_tools" type="relay" args="cam3d/rgb/camera_info cam3d/flip/rgb/camera_info" respawn="true" /-->
 		
-		<!--include file="$(find cob_cam3d_throttle)/launch/cam3d_throttle.launch" >
+		<include file="$(find cob_cam3d_throttle)/launch/cam3d_throttle.launch" >
 			<arg name="namespace" value="/cam3d" />
-			<arg name="rate" value="1.0" />
-			<arg name="start_manager" value="false"/>
+			<arg name="rate" value="0.5" />
+			<arg name="start_manager" value="true"/>
 			<arg name="nodelet_manager" value="cam3d_nodelet_manager"/>
-		</include-->
+		</include>
 
 		<!-- start additional packages -->
 		<param name="/sound_controller/mode" value="cepstral" />
