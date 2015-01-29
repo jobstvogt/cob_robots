@@ -72,12 +72,21 @@
 	<property name="def_arm_pitch" value="-0.7854"/>
 	<property name="def_arm_yaw" value="1.6"/> -->
 
+	<!-- Ausprobieren -->
 	<property name="def_arm_x" value="0.01"/>
 	<property name="def_arm_y" value="0.03"/>
 	<property name="def_arm_z" value="0.80"/>
 	<property name="def_arm_roll" value="-0.2"/>
 	<property name="def_arm_pitch" value="-0.8"/>
 	<property name="def_arm_yaw" value="1.6"/>
+
+	<!-- cob 3-9 
+	<property name="def_arm_x" value="0.040"/>
+	<property name="def_arm_y" value="-0.065"/>
+	<property name="def_arm_z" value="0.85"/>
+	<property name="def_arm_roll" value="-0.1"/>
+	<property name="def_arm_pitch" value="-0.7554"/>
+	<property name="def_arm_yaw" value="1.33899265359"/>-->
 
 	<!-- arm mount positions | relative to base_link 
 	<property name="def_arm_x" value="0.06"/>

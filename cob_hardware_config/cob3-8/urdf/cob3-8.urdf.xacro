@@ -43,7 +43,7 @@
     <origin xyz="${torso_x} ${torso_y} ${torso_z}" rpy="${torso_roll} ${torso_pitch} ${torso_yaw}" />
   </xacro:torso>
   
-  <!----><xacro:schunk_lwa4d name="arm" parent="base_link">
+  <xacro:schunk_lwa4d name="arm" parent="base_link">
     <origin xyz="${arm_x} ${arm_y} ${arm_z}" rpy="${arm_roll} ${arm_pitch} ${arm_yaw}" />
   </xacro:schunk_lwa4d>
   
