@@ -42,7 +42,7 @@
 	<property name="def_torso_x" value="0.1505153138"/>
 	<property name="def_torso_y" value="0.0"/>
 	<property name="def_torso_z" value="0.779240072"/>
-	<property name="def_torso_roll" value="-0.007569885"/>
+	<property name="def_torso_roll" value="1.563226442"/>
 	<property name="def_torso_pitch" value="0.0346163655"/>
 	<property name="def_torso_yaw" value="0.0107070343"/>
 	<!--<property name="def_torso_roll" value="-0.007569885"/>
