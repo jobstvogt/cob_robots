@@ -31,7 +31,7 @@
 	<!-- upper robot calibration -->
 	<!-- *********************** -->
 	<!-- tray mount positions | relative to base_link -->
-	<property name="def_tray_x" value="0.21"/>
+	<property name="def_tray_x" value="0.26"/>
 	<property name="def_tray_y" value="0.18"/>
 	<property name="def_tray_z" value="0.77"/>
 	<property name="def_tray_roll" value="2.3561"/>
@@ -39,9 +39,9 @@
 	<property name="def_tray_yaw" value="0.0"/>
 
 	<!-- torso mount positions | relative to base_link -->
-	<property name="def_torso_x" value="0.1505153138"/>
+	<property name="def_torso_x" value="0.2205153138"/>
 	<property name="def_torso_y" value="0.0"/>
-	<property name="def_torso_z" value="0.779240072"/>
+	<property name="def_torso_z" value="0.759240072"/>
 	<property name="def_torso_roll" value="1.563226442"/>
 	<property name="def_torso_pitch" value="0.0"/>
 	<property name="def_torso_yaw" value="0.0"/>
@@ -73,9 +73,10 @@
 	<property name="def_arm_yaw" value="1.6"/> -->
 
 	<!-- Ausprobieren -->
-	<property name="def_arm_x" value="0.01"/>
+	<!--property name="def_arm_x" value="0.01"/-->
+	<property name="def_arm_x" value="0.08"/>
 	<property name="def_arm_y" value="0.03"/>
-	<property name="def_arm_z" value="0.80"/>
+	<property name="def_arm_z" value="0.78"/>
 	<property name="def_arm_roll" value="-0.2"/>
 	<property name="def_arm_pitch" value="-0.8"/>
 	<property name="def_arm_yaw" value="1.6"/>
@@ -108,12 +109,16 @@
 	<!-- kinematic chain reference positions -->
 	<!-- *********************************** -->
 	<!-- torso chain calibration_offest! | relative to reference position (see below)-->
-	<property name="def_torso_lower_neck_tilt_ref" value="-0.126"/>
+	<!--property name="def_torso_lower_neck_tilt_ref" value="-0.126"/>
+	<property name="def_torso_pan_ref" value="0.0"/>
+	<property name="def_torso_upper_neck_tilt_ref" value="-0.007"/-->
+	<property name="def_torso_lower_neck_tilt_ref" value="0.0"/>
 	<property name="def_torso_pan_ref" value="0.0"/>
 	<property name="def_torso_upper_neck_tilt_ref" value="-0.007"/>
 
+
 	<!-- tray reference position | used as calibration_rising for tray chain -->
-	<property name="def_tray_ref" value="0.0"/>
+	<property name="def_tray_ref" value="-0.022"/>
 
 	<!-- head camera axis reference position | used as calibration_rising for head axis chain -->
 	<property name="def_head_axis_ref" value="0.112"/>
