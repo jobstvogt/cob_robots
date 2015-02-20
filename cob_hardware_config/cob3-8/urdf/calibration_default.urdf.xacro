@@ -33,7 +33,7 @@
 	<!-- tray mount positions | relative to base_link -->
 	<property name="def_tray_x" value="0.26"/>
 	<property name="def_tray_y" value="0.18"/>
-	<property name="def_tray_z" value="0.77"/>
+	<property name="def_tray_z" value="0.80"/>
 	<property name="def_tray_roll" value="2.3561"/>
 	<property name="def_tray_pitch" value="0.0"/>
 	<property name="def_tray_yaw" value="0.0"/>
@@ -41,7 +41,7 @@
 	<!-- torso mount positions | relative to base_link -->
 	<property name="def_torso_x" value="0.2205153138"/>
 	<property name="def_torso_y" value="0.0"/>
-	<property name="def_torso_z" value="0.759240072"/>
+	<property name="def_torso_z" value="0.779"/>
 	<property name="def_torso_roll" value="1.563226442"/>
 	<property name="def_torso_pitch" value="0.0"/>
 	<property name="def_torso_yaw" value="0.0"/>
