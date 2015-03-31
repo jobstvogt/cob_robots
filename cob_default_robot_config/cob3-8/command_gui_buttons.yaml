@@ -22,7 +22,9 @@ group2:
     [left,move,left],
     [right,move,right],
     [shake,move,shake],
-    [nod,move,nod]]
+    [nod,move,nod],
+    [back_extreme,move,back_extreme],
+    [front_extreme,move,front_extreme]]
 group3:
   group_name: tray
   component_name: tray
@@ -39,6 +41,7 @@ group5:
     [recover,trigger,recover],
     [home,move,home],
     [folded,move,folded],
+    [new_folded,move,new_folded],
     [pregrasp,move,pregrasp]]
 group6:
   group_name: arm traj

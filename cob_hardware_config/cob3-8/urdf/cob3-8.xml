@@ -1,0 +1,9 @@
+<Robot name="cob3-8" file="cob3-8.dae">
+	<Manipulator name="arm">
+		<base>base_link</base>
+		<effector>arm_7_link</effector>
+		<!-- we want approach in z axis--><!-- tool tip is in 0.20 m -->
+		<direction>0 0 1</direction>
+		<translation>0 0 0.20</translation>
+	</Manipulator>
+</Robot>
