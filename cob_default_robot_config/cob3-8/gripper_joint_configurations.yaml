@@ -3,6 +3,6 @@ action_name: /gripper_controller/follow_joint_trajectory
 service_ns: /gripper_controller
 default_vel: 0.05
 
-home: [[0.02]]
+home: [[0.015]]
 closed: [[0.00]]
-open: [[0.05]]
+open: [[0.032]]

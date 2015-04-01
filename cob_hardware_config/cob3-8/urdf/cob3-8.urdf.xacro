@@ -17,7 +17,7 @@
   <xacro:include filename="$(find cob_description)/urdf/cob3_tray/tray.urdf.xacro" />
  
   <!-- torso -->
-  <xacro:include filename="$(find cob_description)/urdf/cob3_torso/torso_v2.urdf.xacro" />
+  <xacro:include filename="$(find cob_description)/urdf/cob3_torso/torso_dai.urdf.xacro" />
 
   <!-- arm -->
   <xacro:include filename="$(find schunk_description)/urdf/lwa4d/lwa4d.urdf.xacro" />
