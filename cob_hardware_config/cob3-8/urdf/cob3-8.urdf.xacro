@@ -27,7 +27,9 @@
   
   <!-- head -->
   <xacro:include filename="$(find cob_description)/urdf/cob3_head/head_kinect.urdf.xacro" />
-
+  
+  <!--lookat-->
+  <xacro:include filename="$(find cob_description)/urdf/lookat/lookat.urdf.xacro" />
 
   <!-- generic simulator_gazebo plugins for starting mechanism control, ros time, ros battery -->
   <xacro:include filename="$(find cob_description)/gazebo/gazebo.urdf.xacro" />
@@ -67,6 +69,11 @@
   <xacro:head name="head" parent="torso_upper_neck_tilt_link">
     <origin xyz="${head_x} ${head_y} ${head_z}" rpy="${head_roll} ${head_pitch} ${head_yaw}" />
   </xacro:head>
+
+  <xacro:lookat name="lookat" parent="torso_upper_neck_tilt_link" lower="-5.0" upper="5.0">
+    <origin xyz="${head_x} ${head_y} ${head_z}" rpy="${head_roll} ${head_pitch} ${head_yaw}"/>
+    <axis xyz="-1 0 0"/>
+  </xacro:lookat>
   
   <xacro:schunk_pg70 name="pg70" parent="arm_7_link"
           pg70_finger_left_ref="${pg70_finger_left_ref}"

@@ -101,7 +101,9 @@
 			<arg name="version" value="v1" />
 		</include>
 
-
+		<!-- start additional packages -->
+		<param name="/sound_controller/mode" value="cepstral" />
+		<include file="$(find cob_sound)/ros/launch/sound.launch" />
 
 	</group>
 
@@ -130,7 +132,7 @@
 			<arg name="robot" value="$(arg robot)" />
 		</include>
 		
-		<!--node name="right_finger_publisher" pkg="right_finger_jointstate_publisher" type="right_finger_publisher.py"/-->
+		<node name="right_finger_publisher" pkg="right_finger_jointstate_publisher" type="right_finger_publisher.py"/>
 				
 		<!-- start asus camera -->
 		<include file="$(find cob_bringup)/drivers/openni2.launch" >
@@ -148,9 +150,7 @@
 			<arg name="nodelet_manager" value="cam3d_nodelet_manager"/>
 		</include>
 
-		<!-- start additional packages -->
-		<param name="/sound_controller/mode" value="cepstral" />
-		<include file="$(find cob_sound)/ros/launch/sound.launch" />
+		
 
 	</group>
 
