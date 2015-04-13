@@ -1,1 +1,4 @@
 # NO PARAMETERS YET TO SPECIFY
+sound_enabled: False
+led_enabled: False
+

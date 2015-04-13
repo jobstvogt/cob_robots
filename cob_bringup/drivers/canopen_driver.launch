@@ -3,12 +3,14 @@
 
 	<arg name="robot" default="$(optenv ROBOT !!NO_ROBOT_SET!!)"/>
 	<arg name="pkg_hardware_config" default="$(find cob_hardware_config)"/>
-	<arg name="component_name"/>
+	<arg name="component_name"/>	
 
 	<!-- parameters for CANopen node -->
-	<rosparam command="load" ns="$(arg component_name)_controller" file="$(arg pkg_hardware_config)/$(arg robot)/config/$(arg component_name)_driver.yaml" />
+	<rosparam ns="$(arg component_name)" command="load" file="$(arg pkg_hardware_config)/$(arg robot)/config/$(arg component_name)_driver.yaml" />
 
 	<!-- This is the CANopen ROS wrapper node -->
-	<node ns="$(arg component_name)_controller" name="$(arg component_name)_canopen_ros" pkg="ipa_canopen_ros" type="ipa_canopen_ros" cwd="node" respawn="false" output="screen" />
+	<node ns="$(arg component_name)" name="driver" pkg="ipa_canopen_ros" type="ipa_canopen_ros" cwd="node" respawn="false" output="screen">
+		
+	</node>
 
 </launch>

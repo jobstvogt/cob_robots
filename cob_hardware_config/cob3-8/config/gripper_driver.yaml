@@ -1,8 +1,8 @@
 device: /dev/pcan3
 baudrate: 500K
 sync_interval: 10
-chains: ["gripper_controller"]
-gripper_controller:
+chains: ["gripper"]
+gripper:
  joint_names: [pg70_finger_left_joint]
  motor_direction: [1]
  module_ids: [12]
