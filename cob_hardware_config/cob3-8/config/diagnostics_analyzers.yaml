@@ -65,15 +65,15 @@ analyzers:
       torso:
         type: diagnostic_aggregator/GenericAnalyzer
         path: Torso
-        contains: 'torso'
+        contains: 'torso_driver'
       tray:
         type: diagnostic_aggregator/GenericAnalyzer
         path: Tray
-        contains: 'tray'
+        contains: 'tray_driver'
       gripper:
         type: diagnostic_aggregator/GenericAnalyzer
         path: Gripper
-        contains: 'gripper'
+        contains: 'gripper_driver'
       head:
         type: diagnostic_aggregator/GenericAnalyzer
         path: Head
@@ -81,7 +81,7 @@ analyzers:
       arm:
         type: diagnostic_aggregator/GenericAnalyzer
         path: LWA
-        contains: 'arm'
+        contains: 'arm_driver'
       base:
         type: diagnostic_aggregator/GenericAnalyzer
         path: Base
