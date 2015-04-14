@@ -4,5 +4,5 @@ service_ns: /gripper/driver
 default_vel: 0.05
 
 home: [[0.015]]
-closed: [[0.00]]
-open: [[0.06]]
+closed: [[0.0]]
+open: [[0.032]]
