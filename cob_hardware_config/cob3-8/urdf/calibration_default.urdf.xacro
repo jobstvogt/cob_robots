@@ -119,7 +119,7 @@
 
 	<!-- tray reference position | used as calibration_rising for tray chain 
 	<property name="def_tray_ref" value="0.057"/>-->
-	<property name="def_tray_ref" value="-0.169"/>
+	<property name="def_tray_ref" value="0.0"/>
 
 	<!-- head camera axis reference position | used as calibration_rising for head axis chain -->
 	<property name="def_head_axis_ref" value="0.112"/>
