@@ -10,9 +10,11 @@
 	</node>
 
 	<!-- robot_state_publisher -->
-	<node ns="head" pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher"/>
+	<!--node ns="head" pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher"/-->
 
 	<!-- temporary relay -->
 	<node ns="head" pkg="topic_tools" type="relay" name="joint_states_relay" args="joint_states /joint_states" cwd="node" respawn="true" output="screen"/>
+
+	<remap from="diagnostics" to="/diagnostics"/>
 
 </launch>

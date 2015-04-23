@@ -33,8 +33,17 @@
 		<include file="$(find cob_bringup)/tools/battery_monitor.launch" >
 			<arg name="robot" value="$(arg robot)" />
 		</include>
+
 		<!-- start robot_state_publisher -->
 		<node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher"/>
+
+		<!-- joint_states for the right finger -->
+		<!--node name="right_finger_publisher" pkg="right_finger_jointstate_publisher" type="right_finger_publisher.py"/-->
+
+		<!-- TF2 Buffer Server -->
+  		<node pkg="tf2_ros" type="buffer_server" name="tf2_buffer_server" output="screen">
+    	   	<param name="buffer_size" value="120.0"/>
+  		</node>
 
 		<!-- startup hardware -->
 		<!-- lower robot -->
@@ -137,8 +146,6 @@
 		<include file="$(find cob_bringup)/drivers/head_axis.launch" >
 			<arg name="robot" value="$(arg robot)" />
 		</include>
-		
-		<node name="right_finger_publisher" pkg="right_finger_jointstate_publisher" type="right_finger_publisher.py"/>
 				
 		<!-- start asus camera -->
 		<include file="$(find cob_bringup)/drivers/openni2.launch" >
