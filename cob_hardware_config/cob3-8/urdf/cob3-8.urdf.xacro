@@ -11,7 +11,7 @@
   <xacro:include filename="$(find cob_hardware_config)/cob3-8/urdf/properties.urdf.xacro" />
   
   <!-- base -->
-  <xacro:include filename="$(find cob_description)/urdf/cob3_base/base.urdf.xacro" />
+  <xacro:include filename="$(find cob_description)/urdf/cob3_base/base_dai.urdf.xacro" />
 
   <!-- tray -->
   <xacro:include filename="$(find cob_description)/urdf/cob3_tray/tray.urdf.xacro" />
