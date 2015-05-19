@@ -1,5 +1,5 @@
 # node from which initial footprint is read
-footprint_source: /local_costmap_node/costmap
+footprint_source: /move_base/local_costmap/obstacle_layer_footprint/footprint_stamped
 
 # 
 robot_base_frame: /base_link
