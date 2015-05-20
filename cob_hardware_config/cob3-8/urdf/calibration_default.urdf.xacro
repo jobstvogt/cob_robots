@@ -25,7 +25,7 @@
 	<property name="def_laser_top_z" value="0.42"/>
 	<property name="def_laser_top_roll" value="0.0"/>
 	<property name="def_laser_top_pitch" value="0.0"/>
-	<property name="def_laser_top_yaw" value="0.0"/>
+	<property name="def_laser_top_yaw" value="3.08"/>
 
 	<!-- *********************** -->
 	<!-- upper robot calibration -->
