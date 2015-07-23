@@ -6,12 +6,11 @@ Panels:
       Expanded:
         - /Global Options1
         - /TF1/Frames1
-        - /MotionPlanning1
         - /MotionPlanning1/Scene Robot1
         - /MotionPlanning1/Planning Request1
         - /MotionPlanning1/Planned Path1
       Splitter Ratio: 0.652605
-    Tree Height: 371
+    Tree Height: 477
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -29,7 +28,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: LaserScan Rear
+    SyncSource: LaserScan Top
 Visualization Manager:
   Class: ""
   Displays:
@@ -431,27 +430,13 @@ Visualization Manager:
       Name: PoseArray
       Topic: /particlecloud
       Value: true
-    - Alpha: 1
-      Class: rviz/GridCells
-      Color: 255; 0; 0
-      Enabled: true
-      Name: Obstacles
-      Topic: /move_base/local_costmap/obstacles
-      Value: true
-    - Alpha: 1
-      Class: rviz/GridCells
-      Color: 0; 0; 255
-      Enabled: true
-      Name: Inflated Obstacles
-      Topic: /move_base/local_costmap/inflated_obstacles
-      Value: true
     - Class: rviz/Axes
-      Enabled: true
+      Enabled: false
       Length: 1
       Name: Axes map origin
       Radius: 0.1
       Reference Frame: map
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
@@ -508,13 +493,20 @@ Visualization Manager:
         Z: 0
       Topic: /move_base/TrajectoryPlannerROS/local_plan
       Value: true
-    - Class: rviz/Marker
+    - Alpha: 1
+      Class: rviz/Polygon
+      Color: 25; 255; 0
       Enabled: true
-      Marker Topic: /light_controller/marker
-      Name: Marker Light
-      Namespaces:
-        {}
-      Queue Size: 100
+      Name: Footprint
+      Topic: /move_base/local_costmap/obstacles_footprint/footprint_stamped
+      Value: true
+    - Alpha: 0.7
+      Class: rviz/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Local Costmap
+      Topic: /move_base/local_costmap/costmap
       Value: true
     - Class: rviz/InteractiveMarkers
       Enable Transparency: true
@@ -535,18 +527,20 @@ Visualization Manager:
       Transport Hint: raw
       Value: false
       Visibility:
+        "": true
         Axes map origin: true
+        Bottle Marker: true
+        Contacts: true
+        Footprint: true
+        Grasp Marker: true
         Grid: true
-        Inflated Obstacles: true
         InteractiveMarkers: true
         LaserScan Front: true
         LaserScan Rear: true
         LaserScan Top: true
+        Local Costmap: true
         Map: true
-        Marker Light: true
-        MarkerArray: true
         MotionPlanning: true
-        Obstacles: true
         Path dwa global: true
         Path dwa local: true
         Path tr global: true
@@ -1118,7 +1112,7 @@ Visualization Manager:
     - Class: rviz/MarkerArray
       Enabled: true
       Marker Topic: /move_group/display_grasp_markers
-      Name: MarkerArray
+      Name: Grasp Marker
       Namespaces:
         {}
       Queue Size: 100
@@ -1126,7 +1120,7 @@ Visualization Manager:
     - Class: rviz/MarkerArray
       Enabled: true
       Marker Topic: /bottles_markers
-      Name: MarkerArray
+      Name: Bottle Marker
       Namespaces:
         {}
       Queue Size: 100
@@ -1134,15 +1128,52 @@ Visualization Manager:
     - Class: rviz/MarkerArray
       Enabled: true
       Marker Topic: /move_group/display_contacts
-      Name: MarkerArray
+      Name: Contacts
       Namespaces:
         {}
       Queue Size: 100
       Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /fridge_marker
+      Name: Fridge Marker
+      Namespaces:
+        {}
+      Queue Size: 100
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: ""
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: ObjectDetectionCloud
+      Position Transformer: ""
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.01
+      Style: Flat Squares
+      Topic: /filteredCloud
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: base_link
+    Fixed Frame: odom_combined
     Frame Rate: 30
   Name: root
   Tools:
@@ -1159,22 +1190,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.5767
+      Distance: 10.3448
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.406582
-        Y: -0.0499405
-        Z: 0.935453
+        X: 0.203403
+        Y: 0.721328
+        Z: 0.896991
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.499796
+      Pitch: 1.4048
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.67623
+      Yaw: 1.61622
     Saved: ~
 Window Geometry:
   Camera Stereo Left:
@@ -1186,7 +1217,7 @@ Window Geometry:
   Hide Right Dock: false
   Motion Planning:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000002b1000003dafc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006400fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000028000001b4000000dd00fffffffb0000002400430061006d006500720061002000530074006500720065006f0020004c006500660074020000084400000041000004f100000333fb0000000c00430061006d006500720061010000028a000000c40000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e006701000001e200000220000001ab00ffffff000000010000010f00000326fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000002800000326000000b000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004a00000003efc0100000002fb0000000800540069006d00650000000000000004a0000002f600fffffffb0000000800540069006d0065010000000000000450000000000000000000000490000003da00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000002b1000003dafc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006400fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c00610079007301000000280000021e000000dd00fffffffb0000002400430061006d006500720061002000530074006500720065006f0020004c006500660074020000084400000041000004f100000333fb0000000c00430061006d006500720061010000028a000000c40000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e0067010000024c000001b6000001ab00ffffff000000010000010f00000326fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000002800000326000000b000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004a00000003efc0100000002fb0000000800540069006d00650000000000000004a0000002f600fffffffb0000000800540069006d0065010000000000000450000000000000000000000490000003da00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
