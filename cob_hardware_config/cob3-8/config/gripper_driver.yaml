@@ -6,7 +6,7 @@ defaults:
   pos_to_device: "pos*2000000.0"
   pos_from_device: "obj6064/2000000.0"
   vel_to_device: "vel*2000000.0"
-  vel_from_device: "obj606C*2000000.0"
+  vel_from_device: "obj606C/2000000.0"
 modules:
   - name: pg70_finger_left_joint
     id: 12
